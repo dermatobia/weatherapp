@@ -5,6 +5,7 @@ class CreateConditions < ActiveRecord::Migration
     	t.float :temp_f
     	t.string :status
     	t.belongs_to :city
+    	t.timestamps
     end
   end
 end
