@@ -3,6 +3,7 @@ ruby '2.0.0'
 #ruby-gemset=railstutorial_rails_4_0
 
 gem 'rails', '4.0.4'
+gem 'whenever', :require => false
 
 group :development, :test do
   gem 'pg', '0.15.1'

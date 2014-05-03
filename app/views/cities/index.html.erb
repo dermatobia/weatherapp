@@ -1,3 +1,5 @@
 you are in index.html.erb <br><br>
 
-<%= @info %>
+<% @cities.each do |city| %>
+<%= city.name %><br>
+<% end %>

@@ -17,15 +17,19 @@ ActiveRecord::Schema.define(version: 20140426053556) do
   enable_extension "plpgsql"
 
   create_table "cities", force: true do |t|
-    t.string "name"
-    t.string "state"
+    t.string   "name"
+    t.string   "state"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "conditions", force: true do |t|
-    t.float   "temp_c"
-    t.float   "temp_f"
-    t.string  "status"
-    t.integer "city_id"
+    t.float    "temp_c"
+    t.float    "temp_f"
+    t.string   "status"
+    t.integer  "city_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end
