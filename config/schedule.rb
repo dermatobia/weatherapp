@@ -22,8 +22,13 @@
 set :output, "~/code/weatherapp/log/cron_log.log"
 
 every 2.minutes do 
-	rake "weather:update"
+	rake "weather:update", environment => "development"
 end
 
 # to update cron job, run on terminal ===> whenever --update-crontab store
+# 		* this tries to insert to production db
+
+# To insert to dev db, on terminale 
+		# ====> whenever --update-crontab --set environment=development
+
 # to stop cron job, run on terminal ====> whenever -c store
