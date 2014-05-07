@@ -21,7 +21,7 @@
 
 set :output, "~/code/weatherapp/log/cron_log.log"
 
-every :hour do 
+every 2.minutes do 
 	rake "weather:update"
 end
 

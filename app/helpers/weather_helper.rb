@@ -39,7 +39,7 @@ module WeatherHelper
 	end
 
 	def insert_db(data)
-		city = City.create( name: data['location'],
+		city = City.find_or_create_by( name: data['location'],
 												state: data['state'] )
 
 		city.conditions.create( temp_c: data['temp_c'],
