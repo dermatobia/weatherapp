@@ -1,0 +1,23 @@
+you are in show.html.erb<br><br>
+
+Name of city: <%= @city.name %><br><br>
+
+<table>
+	<tr>
+		<td>Time</td>
+		<td>Status</td>
+		<td>Temp in C</td>
+		<td>Temp in F</td>
+	</tr>
+
+<% @conditions.each do |con| %>
+	<tr>
+		<td><%= con.created_at.getlocal.strftime("%m/%d/%Y - %I:%M %p") %></td>
+		<td><%= con.status %></td>
+		<td><%= con.temp_c %></td>
+		<td><%= con.temp_f %></td>
+	</tr>
+
+<% end %>
+
+</table>
