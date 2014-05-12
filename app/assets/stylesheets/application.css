@@ -11,3 +11,25 @@
  *= require_self
  *= require_tree .
  */
+
+/* ------ GENERAL LAYOUT ------ */
+
+.header{
+	float: left;
+	text-align: center;
+	outline: thin solid red;
+}
+
+.header a {
+	text-decoration: none;
+	color: blue;
+}
+
+.header a:hover{ 
+	color: orange;
+}
+
+.header li{
+	display: inline;
+	margin-right: 10px;
+}

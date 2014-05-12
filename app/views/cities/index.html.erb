@@ -1,5 +1,9 @@
 you are in index.html.erb <br><br>
 
-<% @cities.each do |city| %>
-<%= city.name %><br>
-<% end %>
+<div class="header">
+<ul>
+	<% @cities.each do |city| %>
+	<li><%= link_to city.name, city_path(city) %></li>
+	<% end %>
+</ul>
+</div>
