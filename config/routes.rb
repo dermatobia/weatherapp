@@ -4,7 +4,7 @@ Weatherapp::Application.routes.draw do
 
   resources :cities, only: [:index, :show]
 
-
+  get 'cities/:id/detail', to: 'cities#detail', as: 'city_detail'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
